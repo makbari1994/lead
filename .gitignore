@@ -1,0 +1,30 @@
+# Ignore node_modules globally
+node_modules/
+
+
+
+# Ignore log files
+*.log
+
+# Ignore build and dist directories globally
+build/
+dist/
+
+# Ignore the .next/ folder and build output for Next.js (frontend)
+lead-front/.next/
+lead-front/out/
+
+# Ignore .next.js cache for frontend
+lead-front/.cache/
+
+# Ignore npm or yarn lock files globally (if you want to handle them separately)
+yarn.lock
+package-lock.json
+
+# Ignore IDE or editor-specific files globally
+.vscode/
+.idea/
+
+# Backend specific (NestJS) ignores
+lead-backend/dist/
+lead-backend/*.tsbuildinfo

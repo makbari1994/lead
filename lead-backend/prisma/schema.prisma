@@ -1,0 +1,24 @@
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id             String  @id @default(uuid())
+  name           String
+  email          String
+  source         String
+  salesperson    Salesperson? @relation(fields: [salespersonId], references: [id])
+  salespersonId  String?
+}
+
+model Salesperson {
+  id   String @id @default(uuid())
+  name String
+  leads Lead[]
+}
